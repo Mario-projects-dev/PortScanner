@@ -1,11 +1,9 @@
 #include <winsock2.h>
-
 #include <stdio.h>
+#pragma comment(lib, "ws2_32.lib"); //To link the winsock library 
 
 
-
-int main(void)
-
+int main(int argc, char **argv)
 {
 
     WSADATA wsaData;
