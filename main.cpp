@@ -25,10 +25,16 @@ int main(int argc, char **argv)
 
         fprintf(stderr, "WSAStartup() failed");
         exit(EXIT_FAILURE);
-        
     }
 
-    
+    printf("Enter hostname or ip to scan: ");
+    gets(hostname);
+
+    printf("Enter starting port: ");
+    scanf("%d", &startport);
+
+    printf("Enter ending port: ");
+    scanf("%d", &endtport);    
 
     
 
