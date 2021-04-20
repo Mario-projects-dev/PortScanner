@@ -7,14 +7,19 @@ int main(int argc, char **argv)
 {
 
     WSADATA wsaData;
+    SOCKET S;
+    struct hostent *host;
+    int err, i, startport, endport;
+    struct sockaddr_in sa; //storing destination address
+    char hostname[100];
 
-    int RetCode;
-
+    strncpy((char *)&sa, "", sizeof sa);
+    sa.sin_family = AF_INET; 
 
 
     // Initialize Winsock version 2.2
 
-    if ((RetCode = WSAStartup(MAKEWORD(2, 2), &wsaData)) != 0)
+    if ((WSAStartup(MAKEWORD(2, 2), &wsaData)) != 0)
 
     {
 
