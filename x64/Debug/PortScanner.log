@@ -1,1 +1,3 @@
-﻿
+﻿  main.cpp
+C:\Users\mvite\Desktop\PortScanner\main.cpp(32,9): warning C4013: 'gets' undefined; assuming extern returning int
+  PortScanner.vcxproj -> C:\Users\mvite\Desktop\PortScanner\x64\Debug\PortScanner.exe

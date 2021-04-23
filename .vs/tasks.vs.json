@@ -1,0 +1,15 @@
+{
+  "version": "0.2.1",
+  "tasks": [
+    {
+      "taskLabel": "task-PortScanner",
+      "appliesTo": "/",
+      "type": "launch"
+    },
+    {
+      "taskLabel": "task-PortScanner",
+      "appliesTo": "/",
+      "type": "launch"
+    }
+  ]
+}
