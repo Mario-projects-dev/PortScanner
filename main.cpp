@@ -10,9 +10,10 @@ int main(int argc, char **argv)
     WSADATA wsaData;
     SOCKET s;
     struct hostent *host;
-    int err, i, startport, endport;
+    int err, i, startport, endport, errCode, msg;
     struct sockaddr_in sa; //storing destination address
     char hostname[100];
+    
 
     strncpy((char *)&sa, "", sizeof sa);
     sa.sin_family = AF_INET; 
@@ -71,10 +72,17 @@ int main(int argc, char **argv)
         //connect to the server with that socket
         err = connect(s, (struct sockaddr*)&sa, sizeof sa);
 
-        if (err == SOCKET_ERROR) //connection not accepted
+        //error handling
+        errCode = WSAGetLastError();
+        LPSTR errString = 0;
+        msg = FormatMessage(FORMAT_MESSAGE_ALLOCATE_BUFFER |
+            FORMAT_MESSAGE_FROM_SYSTEM, 0, errCode, 0, (LPSTR)&errString, 0, 0);
+                       
+        if (err == SOCKET_ERROR) //connection not accepted, throw error code
         {
-            printf("%s %-5d Winsock Error Code : %d\n", hostname, i, WSAGetLastError());
+            printf("%s %-5d Winsock Error Code : %d\n", hostname, i, msg);
             fflush(stdout);
+                                
         }
         else  //connection accepted
         {
@@ -85,6 +93,7 @@ int main(int argc, char **argv)
                 exit(EXIT_FAILURE);
             }
         }
+        
         closesocket(s);   //closes the net socket 
     }
 

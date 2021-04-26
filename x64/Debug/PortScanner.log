@@ -1,3 +1,4 @@
 ﻿  main.cpp
-C:\Users\mvite\Desktop\PortScanner\main.cpp(32,9): warning C4013: 'gets' undefined; assuming extern returning int
+C:\Users\mvite\Desktop\PortScanner\main.cpp(33,9): warning C4013: 'gets' undefined; assuming extern returning int
+C:\Users\mvite\Desktop\PortScanner\main.cpp(79,73): warning C4133: 'function': incompatible types - from 'LPSTR' to 'LPWSTR'
   PortScanner.vcxproj -> C:\Users\mvite\Desktop\PortScanner\x64\Debug\PortScanner.exe
