@@ -75,7 +75,7 @@ int main(int argc, char **argv)
         //error handling
         errCode = WSAGetLastError();
         LPSTR errString = 0;
-        msg = FormatMessage(FORMAT_MESSAGE_ALLOCATE_BUFFER |
+        DWORD msg = FormatMessage(FORMAT_MESSAGE_ALLOCATE_BUFFER |
             FORMAT_MESSAGE_FROM_SYSTEM, 0, errCode, 0, (LPSTR)&errString, 0, 0);
                        
         if (err == SOCKET_ERROR) //connection not accepted, throw error code

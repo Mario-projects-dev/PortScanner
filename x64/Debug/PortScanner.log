@@ -1,4 +1,7 @@
 ﻿  main.cpp
 C:\Users\mvite\Desktop\PortScanner\main.cpp(33,9): warning C4013: 'gets' undefined; assuming extern returning int
 C:\Users\mvite\Desktop\PortScanner\main.cpp(79,73): warning C4133: 'function': incompatible types - from 'LPSTR' to 'LPWSTR'
-  PortScanner.vcxproj -> C:\Users\mvite\Desktop\PortScanner\x64\Debug\PortScanner.exe
+C:\Users\mvite\Desktop\PortScanner\main.cpp(83,75): error C2063: 'DWORD': not a function
+C:\Users\mvite\Desktop\PortScanner\main.cpp(83,20): warning C4473: 'printf' : not enough arguments passed for format string
+C:\Users\mvite\Desktop\PortScanner\main.cpp(83,20): message : placeholders and their parameters expect 3 variadic arguments, but 2 were provided
+C:\Users\mvite\Desktop\PortScanner\main.cpp(83,20): message : the missing variadic argument 3 is required by format string '%d'
