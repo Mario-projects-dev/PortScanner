@@ -1,4 +1,4 @@
-#define _WINSOCK_DEPRECATED_NO_WARNINGS
+#define _WINSOCK_DEPRECATED_NO_WARNINGS //define due to error messagge 
 #include <winsock2.h>
 #include <stdio.h>
 #pragma comment(lib, "ws2_32.lib") //To link the winsock library 
