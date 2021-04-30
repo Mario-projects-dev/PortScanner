@@ -1,21 +1,21 @@
-#define _WINSOCK_DEPRECATED_NO_WARNINGS //define due to error messagge 
-#include <winsock2.h>
-#include <stdio.h>
+#define _WINSOCK_DEPRECATED_NO_WARNINGS //define due to error messagge of warnings 
+#include <winsock2.h> //windows libray to use connection for ports 
+#include <stdio.h> 
 #pragma comment(lib, "ws2_32.lib") //To link the winsock library 
 
 
 int main(int argc, char **argv)
 {
 
-    WSADATA wsaData;
-    SOCKET s;
+    WSADATA wsaData;  //initialization variable 
+    SOCKET s;         //socket variable s 
     struct hostent *host;
     int err, i, startport, endport, errCode, msg;
-    struct sockaddr_in sa; //storing destination address
+    struct sockaddr_in sa; 
     char hostname[100];
     
 
-    strncpy((char *)&sa, "", sizeof sa);
+    strncpy((char *)&sa, "", sizeof sa); 
     sa.sin_family = AF_INET; 
 
 
